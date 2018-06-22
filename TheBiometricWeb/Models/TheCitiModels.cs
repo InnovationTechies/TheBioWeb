@@ -8,7 +8,7 @@ namespace TheBiometricWeb.Models
     public partial class TheCitiModels : DbContext
     {
         public TheCitiModels()
-            : base("name=TheCitiModels")
+            : base("name=CitiInternDBEntities")
         {
         }
 
