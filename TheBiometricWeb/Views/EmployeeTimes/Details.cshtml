@@ -1,0 +1,58 @@
+﻿@model TheBiometricWeb.Models.EmployeeTime
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeTime</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpClockIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpClockIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpClockOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpClockOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Present)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Present)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmpTimeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
