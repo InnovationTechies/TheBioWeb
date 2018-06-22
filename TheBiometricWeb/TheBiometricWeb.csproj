@@ -154,36 +154,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\database_firewall_rules.cs">
-      <DependentUpon>TheModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee.cs">
-      <DependentUpon>TheModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EmployeeTime.cs">
-      <DependentUpon>TheModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EmpType.cs">
-      <DependentUpon>TheModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Region.cs">
-      <DependentUpon>TheModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TheModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TheModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TheModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TheModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TheModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TheModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\database_firewall_rules.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeTime.cs" />
+    <Compile Include="Models\EmpType.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\TheCitiModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -195,27 +171,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\Home.PNG" />
     <Content Include="Images\Manager.PNG" />
-    <Content Include="Models\TheModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TheModel.Context.cs</LastGenOutput>
-      <DependentUpon>TheModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\TheModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TheModel.edmx</DependentUpon>
-      <LastGenOutput>TheModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\TheModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TheModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\TheModel.edmx.diagram">
-      <DependentUpon>TheModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
