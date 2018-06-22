@@ -17,7 +17,7 @@ namespace TheBiometricWeb.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            var employees = db.Employees.Include(e => e.EmpType);
+            var employees = db.Employees.Include(e => e.EmpType1);
             return View(employees.ToList());
         }
 
