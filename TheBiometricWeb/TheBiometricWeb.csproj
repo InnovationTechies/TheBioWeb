@@ -160,7 +160,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\database_firewall_rules.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeTime.cs" />
     <Compile Include="Models\EmpType.cs" />
@@ -212,11 +211,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
-    <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\Regions\Create.cshtml" />
     <Content Include="Views\Regions\Delete.cshtml" />
     <Content Include="Views\Regions\Details.cshtml" />
@@ -227,6 +221,11 @@
     <Content Include="Views\EmployeeTimes\Details.cshtml" />
     <Content Include="Views\EmployeeTimes\Edit.cshtml" />
     <Content Include="Views\EmployeeTimes\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

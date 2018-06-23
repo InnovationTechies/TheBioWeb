@@ -8,7 +8,7 @@ namespace TheBiometricWeb.Models
     public partial class TheCitiModels : DbContext
     {
         public TheCitiModels()
-            : base("name=CitiInternDBEntities")
+            : base("name=TheCitiModels")
         {
         }
 
@@ -16,7 +16,6 @@ namespace TheBiometricWeb.Models
         public virtual DbSet<EmployeeTime> EmployeeTimes { get; set; }
         public virtual DbSet<EmpType> EmpTypes { get; set; }
         public virtual DbSet<Region> Regions { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -71,14 +70,6 @@ namespace TheBiometricWeb.Models
 
             modelBuilder.Entity<Region>()
                 .Property(e => e.RegDesc)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<database_firewall_rules>()
-                .Property(e => e.start_ip_address)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<database_firewall_rules>()
-                .Property(e => e.end_ip_address)
                 .IsUnicode(false);
         }
     }
