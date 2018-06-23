@@ -17,8 +17,23 @@ namespace TheBiometricWeb.Controllers
         // GET: Employees
         public ActionResult Index()
         {
+            using (TheCitiModels db = new TheCitiModels()) ;
             var employees = db.Employees.Include(e => e.EmpType);
             return View(employees.ToList());
+        }
+
+        public ActionResult PrintViewToPdf()
+        {
+            var report = new ActionAsPdf("Index");
+            return report;
+        }
+        public ActionResult PrintPartialViewToPdf(int id)
+        {
+            using (TheCitiModels db = new TheCitiModels()) ;
+            Employee employee = new db.Employees.FirstOrDefault(e => e.EmployeeID == id);
+            var report = new PartialViewAsPdf("~/Views/Shared/DetailEmployee.cshtml", employee);
+            return report;
+
         }
 
         // GET: Employees/Details/5
