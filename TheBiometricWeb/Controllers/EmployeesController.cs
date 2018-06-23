@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TheBiometricWeb.Models;
+using Rotativa;
 
 namespace TheBiometricWeb.Controllers
 {
@@ -17,8 +18,25 @@ namespace TheBiometricWeb.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            var employees = db.Employees.Include(e => e.EmpType1);
+            using (TheCitiModels db = new TheCitiModels());
+            var employees = db.Employees.Include(e => e.EmpType);
             return View(employees.ToList());
+        }
+
+        public ActionResult PrintViewToPdf()
+        {
+            var report = new ActionAsPdf("Index");
+            return report;
+        }
+
+
+        public ActionResult PrintPartialViewToPdf(int id)
+        {
+            using (TheCitiModels db = new TheCitiModels()) ;
+            var employees = db.Employees.Include(e => e.EmpType);
+            var report = new PartialViewAsPdf("~/Views/Employees/Index.cshtml", employees.ToList());
+            return report;
+
         }
 
         // GET: Employees/Details/5
